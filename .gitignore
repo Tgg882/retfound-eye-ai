@@ -1,0 +1,93 @@
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+credentials*.json
+service-account*.json
+service_account*.json
+secrets/
+.secrets/
+.aws/
+.ssh/
+
+# Python environments and caches
+.venv/
+venv/
+env/
+ENV/
+.conda/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# Node dependencies
+node_modules/
+
+# RETFound and other model weights (store externally)
+weights/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+*.gguf
+*.ggml
+*.tflite
+*.weights
+*.bin
+
+# Raw or private datasets; keep documentation and evidence images trackable
+datasets/
+raw_data/
+raw_datasets/
+**/data/raw/
+**/data/private/
+*.dcm
+*.dicom
+
+# Temporary experiments, logs and caches
+runs/
+outputs/
+results/
+wandb/
+mlruns/
+lightning_logs/
+.cache/
+tmp/
+temp/
+*.log
+*.tmp
+
+# Private evidence originals; publish reviewed, redacted copies separately
+private_evidence/
+*.unredacted.*
+
+# CodeArts local index only; preserve all existing configuration files
+/.codeartsdoer/.codebase/
+
+# Editor and operating-system temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
