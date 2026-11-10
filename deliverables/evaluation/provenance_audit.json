@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-11-10",
+  "policy": "stage-0 audit only; test was NOT re-run",
+  "final_eval_exists": true,
+  "manifest": {
+    "path": "outputs/manifest/manifest_v1.csv",
+    "sha256_disk": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+    "sha256_json": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+    "match": true,
+    "rows": 23294
+  },
+  "checkpoints": {
+    "stage1_seed42": {
+      "path": "outputs/runs/stage1_v2/seed_42/best.pt",
+      "sha256": "5a3d89f0b8b5c684b464e4a2b06ceda7e9d43c63076ee760fe7e50e1879ff940",
+      "match": true,
+      "epoch": 48,
+      "bytes": 12739585
+    },
+    "stage1_seed43": {
+      "path": "outputs/runs/stage1_v2/seed_43/best.pt",
+      "sha256": "19bbd9b77044cefcd2fdbfef6a74de4c1f27dffb0ce57c29de01c763fb4110ee",
+      "match": true,
+      "epoch": 47,
+      "bytes": 12739585
+    },
+    "stage1_seed44": {
+      "path": "outputs/runs/stage1_v2/seed_44/best.pt",
+      "sha256": "a0061564eceb2e85bf18aa51b77a00784846d0dbfb5af2deaa6167ba9dfdf5e9",
+      "match": true,
+      "epoch": 49,
+      "bytes": 12739585
+    },
+    "stage2_seed42": {
+      "path": "outputs/runs/stage2/seed_42/best.pt",
+      "sha256": "083a529a90c99723df0f1c49847894ebcb51cc9f837135061a72de19c8995137",
+      "match": true,
+      "epoch": 33,
+      "bytes": 3652670853
+    },
+    "stage2_seed43": {
+      "path": "outputs/runs/stage2/seed_43/best.pt",
+      "sha256": "ed8a8fdc3f7cb628e8efa05b504054b294faedbf52abe5e2a3e1e06bcb5e88d4",
+      "match": true,
+      "epoch": 7,
+      "bytes": 3652667973
+    },
+    "stage2_seed44": {
+      "path": "outputs/runs/stage2/seed_44/best.pt",
+      "sha256": "9cbe926c32723aa3d32635ea4ef90b648f0fb8cb1708d3cf8ca6eb919819e20c",
+      "match": true,
+      "epoch": 9,
+      "bytes": 3652667973
+    }
+  },
+  "all_checkpoint_sha_match": true,
+  "git_commit_in_json": "c5a5115a1dc783b0ac6c7c81be2ae7439b90d756",
+  "git_commit_exists": true,
+  "result_files_commit": "e07dade",
+  "test_frozen": {
+    "path": "outputs/reports/final_eval.json",
+    "generated_at": "2026-11-09 22:09:06",
+    "mode": "test",
+    "n_target": 3474,
+    "bootstrap_groups": 3379,
+    "bootstrap_reps": 1000,
+    "sha256": "14c21316c522a242bf39f1066e33259bb7a786fd14cbf7fa0b9a9ab27dd503da"
+  },
+  "holdout_frozen": {
+    "path": "outputs/reports/final_eval_external_holdout.json",
+    "generated_at": "2026-11-09 22:12:20",
+    "mode": "external_holdout",
+    "n_target": 103,
+    "sha256": "7d989814c46962aced3cc5eec899435cbb5d843eea1aa7dd629496b5ecd7922f"
+  },
+  "val_self_check": {
+    "all_match": true,
+    "n_models": 6,
+    "max_abs_diff": 0.0
+  },
+  "report_content_checklist": {
+    "stage1_v2_3seeds": true,
+    "stage2_3seeds": true,
+    "three_seed_summary": true,
+    "per_dataset": true,
+    "per_label": true,
+    "group_bootstrap_ci": true,
+    "idrid_official_holdout": true,
+    "ece": true,
+    "paired_delta": true
+  },
+  "known_report_gap": {
+    "file": "outputs/reports/final_eval_external_holdout.md",
+    "issue": "reproduction table prints \"not hashed\" for six checkpoints because the holdout payload did not persist checkpoint_sha256",
+    "resolution": "original result left unchanged; exact SHAs verified against final_eval.json and recorded in deliverables/model/checkpoint_inventory.csv and this audit"
+  },
+  "pytest": {
+    "command": ".venv/Scripts/python.exe -m pytest -q",
+    "result": "19 passed, 1 skipped"
+  }
+}

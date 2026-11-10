@@ -1,0 +1,13 @@
+{
+  "schema": "cfp9-manifest-public-provenance-v1",
+  "source_manifest": "outputs/manifest/manifest_v1.csv",
+  "source_manifest_sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+  "public_manifest": "manifest_v1.public.csv",
+  "public_manifest_sha256": "434b191da03328f6a571eee9436df74a9faa09c57cd180fd829ad2f58e388003",
+  "row_count": 23294,
+  "path_column": "path",
+  "transformation": "path column replaced by paths.path_key(path); all other columns unchanged",
+  "semantic_columns_except_path_unchanged": true,
+  "semantic_sha256_except_path": "a5188c88dddc14b1de32f693d9f1d7a8cdfc6c96f91aeada1dcb72019c196a35",
+  "path_key_sequence_sha256": "3df16b896d755ffbcd1aa52e89236028aeb5265e9d730b80d42ae5e3469d3375"
+}

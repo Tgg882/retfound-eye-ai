@@ -1,0 +1,45 @@
+{
+  "built_at": "2026-11-06T17:26:42",
+  "source": "outputs\\manifest\\manifest_v0.csv",
+  "rows_before": 24250,
+  "conflict_groups": 469,
+  "rows_removed": 951,
+  "holdout_protected_groups": [
+    {
+      "sha1": "ce0f7b5f6b381b61bbefbc79f388aaf0b360091e",
+      "kept": "dataset/03_IDRID\\test\\class_3\\IDRiD_064_1.jpg",
+      "dropped": "dataset/03_IDRID\\train\\class_0\\IDRiD_118.jpg"
+    }
+  ],
+  "rows_after": 23299,
+  "rows_by_dataset": {
+    "DDR": 12522,
+    "Fundus10": 4376,
+    "APTOS2019": 3654,
+    "MESSIDOR-2": 1744,
+    "IDRID": 515,
+    "PAPILA": 488
+  },
+  "expected_clean": {
+    "MESSIDOR-2": 1744,
+    "APTOS2019": 3654,
+    "IDRID": 515,
+    "DDR": 12522,
+    "Fundus10": 4376,
+    "PAPILA": 488
+  },
+  "counts_match_expected": {
+    "MESSIDOR-2": true,
+    "APTOS2019": true,
+    "IDRID": true,
+    "DDR": true,
+    "Fundus10": true,
+    "PAPILA": true
+  },
+  "idrid_external_holdout": 103,
+  "deviation_note": "user projection was 23298 rows / IDRID 514; one conflicting pair is (official-test, train) and the holdout must stay at 103, so only the train copy is dropped -> 23299 rows / IDRID 515",
+  "rows_without_supervision": 0,
+  "exploratory_labels": [
+    "csc"
+  ]
+}

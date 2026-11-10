@@ -1,0 +1,5 @@
+outs:
+- md5: efaee6400c44b895b4c37c5490d21974
+  size: 745209
+  hash: md5
+  path: fundus10_clean.csv

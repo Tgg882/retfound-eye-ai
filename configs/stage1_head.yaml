@@ -1,0 +1,13 @@
+seed: 42
+batch_size: 256
+epochs: 30
+hidden: 512
+dropout: 0.3
+lr: 0.001
+weight_decay: 0.01
+scheduler: cosine
+label_smoothing: 0.05
+alpha: 0.25
+sqrt_balanced_sampler: true
+drop_train_rejects: true
+macro_min_pos: 30

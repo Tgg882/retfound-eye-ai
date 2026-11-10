@@ -1,0 +1,207 @@
+{
+  "v1_30ep_h512": {
+    "config": "configs/stage1_head.yaml",
+    "protocol": "v1_30ep_h512",
+    "manifest": "outputs\\manifest\\manifest_v1.csv",
+    "manifest_sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "macro_mean": 0.8723972597910943,
+    "macro_std": 0.0021966597386910676,
+    "dr_mean": 0.887261700561324,
+    "dr_std": 0.0012392851140405742,
+    "best_epochs": {
+      "42": 25,
+      "43": 24,
+      "44": 27
+    },
+    "reload_reproduced": {
+      "42": true,
+      "43": true,
+      "44": true
+    },
+    "per_label": {
+      "normal": {
+        "mean": 0.9121424129353234,
+        "std": 0.000951817653296942,
+        "seed42": 0.9120491293532339,
+        "seed43": 0.9131374378109453,
+        "seed44": 0.9112406716417909,
+        "exploratory": false
+      },
+      "dr": {
+        "mean": 0.887261700561324,
+        "std": 0.0012392851140405742,
+        "seed42": 0.8862425285349693,
+        "seed43": 0.8869013475654871,
+        "seed44": 0.8886412255835155,
+        "exploratory": false
+      },
+      "glaucoma": {
+        "mean": 0.8135595569786945,
+        "std": 0.0031421165322385474,
+        "seed42": 0.8152368278787375,
+        "seed43": 0.809934711190585,
+        "seed44": 0.815507131866761,
+        "exploratory": false
+      },
+      "csc": {
+        "mean": 0.9059265010351966,
+        "std": 0.005380595985065174,
+        "seed42": 0.9069616977225673,
+        "seed43": 0.900103519668737,
+        "seed44": 0.9107142857142857,
+        "exploratory": true
+      },
+      "disc_edema": {
+        "mean": 0.8804036458333333,
+        "std": 0.01707570099329551,
+        "seed42": 0.89873046875,
+        "seed43": 0.86494140625,
+        "seed44": 0.8775390625,
+        "exploratory": false
+      },
+      "macular_scar": {
+        "mean": 0.7866688273105386,
+        "std": 0.009830033265105896,
+        "seed42": 0.7979581915410793,
+        "seed43": 0.780003240965808,
+        "seed44": 0.7820450494247285,
+        "exploratory": false
+      },
+      "myopia": {
+        "mean": 0.9623538011695906,
+        "std": 0.0028451248046236846,
+        "seed42": 0.9609032346491229,
+        "seed43": 0.9605263157894737,
+        "seed44": 0.9656318530701753,
+        "exploratory": false
+      },
+      "retinal_det": {
+        "mean": 0.9349529780564264,
+        "std": 0.004485134190064767,
+        "seed42": 0.9350400557297109,
+        "seed43": 0.9304249390456288,
+        "seed44": 0.9393939393939396,
+        "exploratory": false
+      },
+      "retinitis_pig": {
+        "mean": 0.9943134171907756,
+        "std": 0.0003177242047426945,
+        "seed42": 0.9939465408805032,
+        "seed43": 0.9944968553459119,
+        "seed44": 0.9944968553459119,
+        "exploratory": false
+      }
+    },
+    "gate_dr_ge_0_90": false
+  },
+  "v2_50ep_h1024": {
+    "config": "configs/stage1_head_v2.yaml",
+    "protocol": "v2_50ep_h1024",
+    "manifest": "outputs\\manifest\\manifest_v1.csv",
+    "manifest_sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "macro_mean": 0.9032288658719243,
+    "macro_std": 0.0007773044264411251,
+    "dr_mean": 0.9121900225287013,
+    "dr_std": 0.0008762723245152723,
+    "best_epochs": {
+      "42": 48,
+      "43": 47,
+      "44": 49
+    },
+    "reload_reproduced": {
+      "42": true,
+      "43": true,
+      "44": true
+    },
+    "per_label": {
+      "normal": {
+        "mean": 0.9261608623548923,
+        "std": 0.0007347350165193666,
+        "seed42": 0.9269900497512438,
+        "seed43": 0.9259017412935324,
+        "seed44": 0.9255907960199005,
+        "exploratory": false
+      },
+      "dr": {
+        "mean": 0.9121900225287013,
+        "std": 0.0008762723245152723,
+        "seed42": 0.9128218237440874,
+        "seed43": 0.9125585732376764,
+        "seed44": 0.91118967060434,
+        "exploratory": false
+      },
+      "glaucoma": {
+        "mean": 0.847323297431419,
+        "std": 0.0025248761493040324,
+        "seed42": 0.8446583773443673,
+        "seed43": 0.8496797937372645,
+        "seed44": 0.8476317212126252,
+        "exploratory": false
+      },
+      "csc": {
+        "mean": 0.9328847481021394,
+        "std": 0.005896325152704511,
+        "seed42": 0.9349120082815736,
+        "seed43": 0.9375,
+        "seed44": 0.9262422360248447,
+        "exploratory": true
+      },
+      "disc_edema": {
+        "mean": 0.9239583333333333,
+        "std": 0.001513934369040869,
+        "seed42": 0.9228515625,
+        "seed43": 0.92333984375,
+        "seed44": 0.9256835937500001,
+        "exploratory": false
+      },
+      "macular_scar": {
+        "mean": 0.8549127640036732,
+        "std": 0.006201716019644093,
+        "seed42": 0.8598930481283422,
+        "seed43": 0.8479662939555989,
+        "seed44": 0.8568789499270782,
+        "exploratory": false
+      },
+      "myopia": {
+        "mean": 0.9755573830409356,
+        "std": 0.0011821959878129062,
+        "seed42": 0.9743695175438596,
+        "seed43": 0.9755688048245614,
+        "seed44": 0.976733826754386,
+        "exploratory": false
+      },
+      "retinal_det": {
+        "mean": 0.9441832114245908,
+        "std": 0.0006279260319511028,
+        "seed42": 0.9443573667711598,
+        "seed43": 0.9447056774642981,
+        "seed44": 0.9434865900383144,
+        "exploratory": false
+      },
+      "retinitis_pig": {
+        "mean": 0.996829140461216,
+        "std": 0.00027609155536829384,
+        "seed42": 0.9970911949685535,
+        "seed43": 0.9965408805031446,
+        "seed44": 0.9968553459119497,
+        "exploratory": false
+      }
+    },
+    "gate_dr_ge_0_90": true
+  },
+  "notes": [
+    "v1 (30 epochs, hidden 512) is the protocol as originally specified; it misses the DR>=0.90 gate (0.8873).",
+    "v2 (50 epochs, hidden 1024) was selected on val with seed 42 only, then confirmed on seeds 43/44; test and external holdout were never used.",
+    "macro uses labels with val n_pos >= 30: normal, dr, glaucoma, macular_scar, myopia; csc stays exploratory."
+  ]
+}

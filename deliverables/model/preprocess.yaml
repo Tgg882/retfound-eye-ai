@@ -1,0 +1,36 @@
+# Preprocessing contract for inference (must match Stage 2 training / R2-3 feature cache).
+preprocess:
+  version: cfp9-v1
+  input: RGB color fundus photograph (any size; shortest side >= 358 px in the training data)
+  steps:
+    - name: convert
+      op: PIL Image.convert("RGB")
+    - name: resize
+      op: torchvision.transforms.Resize
+      size: 256            # = img_size / 0.875 with img_size = 224
+      interpolation: BICUBIC
+    - name: center_crop
+      op: torchvision.transforms.CenterCrop
+      size: 224
+    - name: to_tensor
+      op: torchvision.transforms.ToTensor
+      scale: [0, 1]
+    - name: normalize
+      op: torchvision.transforms.Normalize
+      mean: [0.485, 0.456, 0.406]
+      std: [0.229, 0.224, 0.225]
+  feature_postprocess:
+    name: l2_normalize
+    dim: 1
+    note: >-
+      The pooled encoder feature is L2-normalised over the channel dimension before the
+      classification head. This matches the R2-3 cache used to train the Stage 1 head.
+      The forward path is forward_head(forward_features(x), pre_logits=True) -> L2 -> head.
+  img_size: 224
+  center_crop: true
+  evaluated_on_preprocessed_png: true
+  preprocessed_source:
+    path: outputs/manifest/manifest_v0_clean_preprocessed.csv
+    note: >-
+      Stage 2 was trained and evaluated on 256 px PNG crops produced by scripts/02_preprocess.py
+      (AutoMorph unavailable on Windows -> documented fallback: field-of-view crop + resize 256).

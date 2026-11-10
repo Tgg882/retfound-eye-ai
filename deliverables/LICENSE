@@ -1,0 +1,33 @@
+# License and use notice
+
+This repository is a **non-commercial research release**. It is not a medical device and
+must not be used for clinical diagnosis, screening, treatment decisions, or regulatory
+purposes.
+
+## Original project code
+
+The original CFP-9 training/evaluation code in this release is provided for research
+reproduction. No separate commercial license is granted.
+
+## RETFound
+
+The RETFound source code and model weights are subject to the RETFound license. The local
+copy is **Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**; see
+`code/third_party/RETFound-main/LICENSE` and `model/RETFound_LICENSE.txt`.
+Any redistribution or derivative model release must preserve attribution and the
+non-commercial restriction, and must comply with the RETFound project's own terms.
+
+## Datasets
+
+The release does **not** grant rights to redistribute the source datasets. Each dataset
+remains subject to its official terms:
+
+- DDR: CC BY-NC-SA 4.0
+- Fundus10: CC BY 4.0
+- APTOS2019: Kaggle competition rules / research use
+- MESSIDOR-2: ADCIS research-use terms
+- IDRID: IEEE DataPort research-use terms
+- PAPILA: check the official figshare license
+
+Do not upload restricted raw images to a public GitHub repository or public Baidu link
+unless the dataset owner permits redistribution.

@@ -1,0 +1,96 @@
+{
+  "tag": "v0_clean_resplit",
+  "built_at": "2026-11-06T17:26:45",
+  "smoke_limit_per_source": null,
+  "rows_total": 23299,
+  "rows_by_dataset": {
+    "DDR": 12522,
+    "Fundus10": 4376,
+    "APTOS2019": 3654,
+    "MESSIDOR-2": 1744,
+    "IDRID": 515,
+    "PAPILA": 488
+  },
+  "rows_by_split": {
+    "train": 16236,
+    "test": 3583,
+    "val": 3480
+  },
+  "expected_rows": {
+    "MESSIDOR-2": 1744,
+    "APTOS2019": 3662,
+    "IDRID": 516,
+    "DDR": 12522,
+    "Fundus10": 5318,
+    "PAPILA": 488
+  },
+  "row_count_match_expected": {
+    "DDR": true,
+    "Fundus10": false,
+    "APTOS2019": false,
+    "MESSIDOR-2": true,
+    "IDRID": false,
+    "PAPILA": true
+  },
+  "dedup": {
+    "source": "reused from outputs\\manifest\\manifest_v0_clean.csv",
+    "n_rows": 23299,
+    "n_groups": 22887,
+    "n_multi_member_groups": 400,
+    "max_group_size": 4,
+    "n_phash_failures": 0,
+    "n_cross_dataset_groups": 0
+  },
+  "exact_duplicate_label_conflicts": {
+    "rows_in_exact_dup_groups": 470,
+    "groups": 231,
+    "conflicting_groups": 0,
+    "by_dataset": {
+      "APTOS2019": {
+        "rows_in_exact_dup_groups": 243,
+        "groups": 119,
+        "conflicting_groups": 0
+      },
+      "DDR": {
+        "rows_in_exact_dup_groups": 197,
+        "groups": 97,
+        "conflicting_groups": 0
+      },
+      "Fundus10": {
+        "rows_in_exact_dup_groups": 12,
+        "groups": 6,
+        "conflicting_groups": 0
+      },
+      "IDRID": {
+        "rows_in_exact_dup_groups": 10,
+        "groups": 5,
+        "conflicting_groups": 0
+      },
+      "MESSIDOR-2": {
+        "rows_in_exact_dup_groups": 8,
+        "groups": 4,
+        "conflicting_groups": 0
+      }
+    },
+    "note": "identical bytes with different labels; v0 keeps them (pipeline only) and must be resolved before manifest v1"
+  },
+  "splits": {
+    "policy": "group-aware greedy stratified 70/15/15 (seed=42)",
+    "warnings": [],
+    "strata": 19
+  },
+  "idrid_external_holdout": {
+    "n": 103,
+    "expected": 103,
+    "all_legacy_test": true
+  },
+  "gates": {
+    "G1_forbidden_path_rows": 0,
+    "G1_pterygium_rows": 0,
+    "G1_ddr_label5_rows": 0,
+    "G2_cross_split_groups": 0,
+    "G4_mask_violations": 0,
+    "G4_rows_without_supervision": 0,
+    "G3_embedding_guard": "pending (manifest v1)"
+  }
+}

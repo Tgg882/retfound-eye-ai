@@ -1,0 +1,21 @@
+{
+  "feature": {
+    "n": 23299,
+    "dim": 1024,
+    "seconds": 0.0,
+    "reused": true
+  },
+  "load_state_dict": {
+    "reused": true
+  },
+  "rule": "cosine(centred) >= 0.99 AND pHash Hamming <= 24",
+  "raw_cosine_note": "raw (uncentred) cosine >= 0.98 collapsed 22887 groups into 5219 (max 64); centred cosine alone still chains, hence the pHash confirmation",
+  "n_edges_merged": 209,
+  "n_groups_v0": 22887,
+  "n_groups_v1": 22678,
+  "max_group_size": 11,
+  "n_multi_member_groups": 548,
+  "nearest_similarity_p50": 0.9920464754104614,
+  "nearest_similarity_p99": 1.0,
+  "nearest_similarity_max": 1.0
+}

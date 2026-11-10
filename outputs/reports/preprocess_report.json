@@ -1,0 +1,12 @@
+{
+  "n_total": 23299,
+  "n_ok": 23299,
+  "n_failed": 0,
+  "coverage_p05": 0.7054803333365929,
+  "coverage_p50": 0.7579326402425818,
+  "coverage_p95": 0.8568622233861254,
+  "fraction_coverage_0.30_0.95": 0.9757500321902227,
+  "fraction_center_crop": 0.0,
+  "min_source_side": 358,
+  "failures_by_dataset": {}
+}

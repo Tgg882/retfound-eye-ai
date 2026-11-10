@@ -1,0 +1,75 @@
+{
+  "version": "cfp9-v1",
+  "method": "per-label temperature scaling (p = sigmoid(logit / T)), T fitted by minimising val NLL",
+  "fitted_on": "val split only",
+  "min_pos": 30,
+  "primary_model": "stage2_seed42",
+  "models": {
+    "stage1_seed42": {
+      "normal": 0.7208927747088472,
+      "dr": 0.9706857742583032,
+      "glaucoma": 0.9803604367456448,
+      "csc": 1.0,
+      "disc_edema": 1.0,
+      "macular_scar": 0.7972651367453139,
+      "myopia": 0.6854955224569818,
+      "retinal_det": 1.0,
+      "retinitis_pig": 1.0
+    },
+    "stage1_seed43": {
+      "normal": 0.7208927747088472,
+      "dr": 0.9611065859361113,
+      "glaucoma": 0.9611065859361113,
+      "csc": 1.0,
+      "disc_edema": 1.0,
+      "macular_scar": 0.8323738612412124,
+      "myopia": 0.6854955224569818,
+      "retinal_det": 1.0,
+      "retinitis_pig": 1.0
+    },
+    "stage1_seed44": {
+      "normal": 0.7581178513971014,
+      "dr": 0.9755111119790766,
+      "glaucoma": 0.9950535286973986,
+      "csc": 1.0,
+      "disc_edema": 1.0,
+      "macular_scar": 0.8039768484086092,
+      "myopia": 0.6854955224569818,
+      "retinal_det": 1.0,
+      "retinitis_pig": 1.0
+    },
+    "stage2_seed42": {
+      "normal": 1.1546573369122095,
+      "dr": 1.2133572178228789,
+      "glaucoma": 1.3871688482435938,
+      "csc": 1.0,
+      "disc_edema": 1.0,
+      "macular_scar": 1.0,
+      "myopia": 0.9055842968854534,
+      "retinal_det": 1.0,
+      "retinitis_pig": 1.0
+    },
+    "stage2_seed43": {
+      "normal": 1.020033002677617,
+      "dr": 1.0099668324641247,
+      "glaucoma": 1.3190561311241311,
+      "csc": 1.0,
+      "disc_edema": 1.0,
+      "macular_scar": 0.9852338677990639,
+      "myopia": 0.9422308723474415,
+      "retinal_det": 1.0,
+      "retinitis_pig": 1.0
+    },
+    "stage2_seed44": {
+      "normal": 0.8,
+      "dr": 1.2542878823001253,
+      "glaucoma": 1.0933620739432781,
+      "csc": 1.0,
+      "disc_edema": 1.0,
+      "macular_scar": 0.8365116420730186,
+      "myopia": 0.8365116420730186,
+      "retinal_det": 1.0,
+      "retinitis_pig": 1.0
+    }
+  }
+}

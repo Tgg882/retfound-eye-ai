@@ -1,0 +1,1792 @@
+{
+  "mode": "external_holdout",
+  "generated_at": "2026-11-09 22:12:20",
+  "manifest": {
+    "path": "outputs\\manifest\\manifest_v1.csv",
+    "sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+    "n_rows_total": 23294,
+    "n_val": 3479,
+    "n_target": 103,
+    "target_datasets": {
+      "IDRID": 103
+    }
+  },
+  "labels": [
+    "normal",
+    "dr",
+    "glaucoma",
+    "csc",
+    "disc_edema",
+    "macular_scar",
+    "myopia",
+    "retinal_det",
+    "retinitis_pig"
+  ],
+  "label_roles": {
+    "core_for_macro": [
+      "normal",
+      "dr",
+      "glaucoma",
+      "macular_scar",
+      "myopia"
+    ],
+    "exploratory": [
+      "csc",
+      "disc_edema",
+      "retinal_det",
+      "retinitis_pig"
+    ],
+    "macro_rule": "labels with n_pos >= 30 on the reported split"
+  },
+  "calibration": {
+    "fitted_on": "val",
+    "method": "per-label temperature scaling",
+    "min_pos": 30
+  },
+  "sensitivity_thresholds": {
+    "fitted_on": "val",
+    "target_specificity": 0.9
+  },
+  "provenance": {
+    "git_commit": "c5a5115a1dc783b0ac6c7c81be2ae7439b90d756",
+    "torch_version": "2.8.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "stage1_config": "configs\\stage1_head_v2.yaml",
+    "stage2_config": "configs\\stage2_finetune.yaml",
+    "features": "outputs\\features\\retfound_cfp_224.npy",
+    "preprocessed_manifest": "outputs\\manifest\\manifest_v0_clean_preprocessed.csv",
+    "checkpoints": {
+      "stage1_seed42": {
+        "checkpoint": "outputs\\runs\\stage1_v2\\seed_42\\best.pt",
+        "checkpoint_bytes": 12739585,
+        "ckpt_epoch": 48,
+        "ckpt_manifest_sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+        "predict_seconds": 0.2
+      },
+      "stage1_seed43": {
+        "checkpoint": "outputs\\runs\\stage1_v2\\seed_43\\best.pt",
+        "checkpoint_bytes": 12739585,
+        "ckpt_epoch": 47,
+        "ckpt_manifest_sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+        "predict_seconds": 0.0
+      },
+      "stage1_seed44": {
+        "checkpoint": "outputs\\runs\\stage1_v2\\seed_44\\best.pt",
+        "checkpoint_bytes": 12739585,
+        "ckpt_epoch": 49,
+        "ckpt_manifest_sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+        "predict_seconds": 0.0
+      },
+      "stage2_seed42": {
+        "checkpoint": "outputs\\runs\\stage2\\seed_42\\best.pt",
+        "checkpoint_bytes": 3652670853,
+        "ckpt_epoch": 33,
+        "ckpt_manifest_sha256": null,
+        "predict_seconds": 56.9
+      },
+      "stage2_seed43": {
+        "checkpoint": "outputs\\runs\\stage2\\seed_43\\best.pt",
+        "checkpoint_bytes": 3652667973,
+        "ckpt_epoch": 7,
+        "ckpt_manifest_sha256": null,
+        "predict_seconds": 55.6
+      },
+      "stage2_seed44": {
+        "checkpoint": "outputs\\runs\\stage2\\seed_44\\best.pt",
+        "checkpoint_bytes": 3652667973,
+        "ckpt_epoch": 9,
+        "ckpt_manifest_sha256": null,
+        "predict_seconds": 57.0
+      }
+    }
+  },
+  "results": {
+    "stage1_seed42": {
+      "per_label": {
+        "normal": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "dr": {
+          "n_pos": 69,
+          "n_neg": 34,
+          "auroc": 0.8785166240409207,
+          "aupr": 0.9459032156675471,
+          "ece": 0.15231918033610267,
+          "brier": 0.1533074676990509,
+          "used_for_macro": true,
+          "exploratory": false,
+          "ece_raw": 0.15195301912941978,
+          "brier_raw": 0.15245109796524048,
+          "sensitivity_at_val_thr": 0.927536231884058,
+          "specificity_at_val_thr": 0.5
+        },
+        "glaucoma": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "csc": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "disc_edema": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "macular_scar": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "myopia": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinal_det": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinitis_pig": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "_macro_auroc": 0.8785166240409207,
+        "_macro_aupr": 0.9459032156675471,
+        "_macro_ece": 0.15231918033610267,
+        "_macro_labels": [
+          "dr"
+        ]
+      },
+      "per_dataset": {
+        "IDRID": {
+          "n": 103,
+          "dr_auroc": 0.8785166240409207,
+          "macro_auroc": 0.8785166240409207
+        }
+      },
+      "thresholds_at_spec90": {
+        "normal": -0.42324399948120117,
+        "dr": 0.12180545926094055,
+        "glaucoma": -0.29523754119873047,
+        "csc": -2.5771214962005615,
+        "disc_edema": -2.4562392234802246,
+        "macular_scar": -1.5781198740005493,
+        "myopia": -2.1645452976226807,
+        "retinal_det": -2.851992607116699,
+        "retinitis_pig": -2.9920663833618164
+      },
+      "temperatures": {
+        "normal": 0.7208927747088472,
+        "dr": 0.9706857742583032,
+        "glaucoma": 0.9803604367456448,
+        "csc": 1.0,
+        "disc_edema": 1.0,
+        "macular_scar": 0.7972651367453139,
+        "myopia": 0.6854955224569818,
+        "retinal_det": 1.0,
+        "retinitis_pig": 1.0
+      },
+      "val_metrics_for_thresholds": {
+        "normal": {
+          "n_pos": 120,
+          "auroc_raw": 0.9269900497512438,
+          "temperature": 0.7208927747088472,
+          "thr_spec90": -0.42324399948120117,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.7416666666666667,
+          "val_specificity": 0.9011194029850746
+        },
+        "dr": {
+          "n_pos": 1588,
+          "auroc_raw": 0.9128218237440873,
+          "temperature": 0.9706857742583032,
+          "thr_spec90": 0.12180545926094055,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.7399244332493703,
+          "val_specificity": 0.9004400440044005
+        },
+        "glaucoma": {
+          "n_pos": 173,
+          "auroc_raw": 0.8446583773443673,
+          "temperature": 0.9803604367456448,
+          "thr_spec90": -0.29523754119873047,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.5433526011560693,
+          "val_specificity": 0.9010791366906474
+        },
+        "csc": {
+          "n_pos": 12,
+          "auroc_raw": 0.9349120082815736,
+          "temperature": 1.0,
+          "thr_spec90": -2.5771214962005615,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8333333333333334,
+          "val_specificity": 0.9006211180124224
+        },
+        "disc_edema": {
+          "n_pos": 16,
+          "auroc_raw": 0.9228515625,
+          "temperature": 1.0,
+          "thr_spec90": -2.4562392234802246,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8125,
+          "val_specificity": 0.9015625
+        },
+        "macular_scar": {
+          "n_pos": 51,
+          "auroc_raw": 0.8598930481283422,
+          "temperature": 0.7972651367453139,
+          "thr_spec90": -1.5781198740005493,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.5686274509803921,
+          "val_specificity": 0.9008264462809917
+        },
+        "myopia": {
+          "n_pos": 48,
+          "auroc_raw": 0.9743695175438596,
+          "temperature": 0.6854955224569818,
+          "thr_spec90": -2.1645452976226807,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9791666666666666,
+          "val_specificity": 0.9013157894736842
+        },
+        "retinal_det": {
+          "n_pos": 18,
+          "auroc_raw": 0.9443573667711598,
+          "temperature": 1.0,
+          "thr_spec90": -2.851992607116699,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9444444444444444,
+          "val_specificity": 0.9012539184952978
+        },
+        "retinitis_pig": {
+          "n_pos": 20,
+          "auroc_raw": 0.9970911949685535,
+          "temperature": 1.0,
+          "thr_spec90": -2.9920663833618164,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9009433962264151
+        }
+      },
+      "dr_auroc": 0.8785166240409207,
+      "dr_aupr": 0.9459032156675471,
+      "macro_auroc": 0.8785166240409207,
+      "macro_aupr": 0.9459032156675471,
+      "macro_ece": 0.15231918033610267,
+      "macro_ece_raw": 0.15195301912941978,
+      "dr_ece": 0.15231918033610267,
+      "dr_ece_raw": 0.15195301912941978,
+      "dr_brier": 0.1533074676990509,
+      "dr_sens_at_spec90": 0.927536231884058,
+      "dr_spec_at_spec90": 0.5,
+      "macro_sens_at_spec90": 0.927536231884058
+    },
+    "stage1_seed43": {
+      "per_label": {
+        "normal": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "dr": {
+          "n_pos": 69,
+          "n_neg": 34,
+          "auroc": 0.876385336743393,
+          "aupr": 0.945108678168672,
+          "ece": 0.1487711056054217,
+          "brier": 0.1545264571905136,
+          "used_for_macro": true,
+          "exploratory": false,
+          "ece_raw": 0.16253392416441323,
+          "brier_raw": 0.15332621335983276,
+          "sensitivity_at_val_thr": 0.9130434782608695,
+          "specificity_at_val_thr": 0.5294117647058824
+        },
+        "glaucoma": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "csc": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "disc_edema": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "macular_scar": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "myopia": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinal_det": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinitis_pig": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "_macro_auroc": 0.876385336743393,
+        "_macro_aupr": 0.945108678168672,
+        "_macro_ece": 0.1487711056054217,
+        "_macro_labels": [
+          "dr"
+        ]
+      },
+      "per_dataset": {
+        "IDRID": {
+          "n": 103,
+          "dr_auroc": 0.876385336743393,
+          "macro_auroc": 0.876385336743393
+        }
+      },
+      "thresholds_at_spec90": {
+        "normal": -0.3709976077079773,
+        "dr": 0.14008936285972595,
+        "glaucoma": -0.2727005183696747,
+        "csc": -2.4932773113250732,
+        "disc_edema": -2.402862548828125,
+        "macular_scar": -1.7387328147888184,
+        "myopia": -2.155888795852661,
+        "retinal_det": -2.86737060546875,
+        "retinitis_pig": -3.0056369304656982
+      },
+      "temperatures": {
+        "normal": 0.7208927747088472,
+        "dr": 0.9611065859361113,
+        "glaucoma": 0.9611065859361113,
+        "csc": 1.0,
+        "disc_edema": 1.0,
+        "macular_scar": 0.8323738612412124,
+        "myopia": 0.6854955224569818,
+        "retinal_det": 1.0,
+        "retinitis_pig": 1.0
+      },
+      "val_metrics_for_thresholds": {
+        "normal": {
+          "n_pos": 120,
+          "auroc_raw": 0.9259017412935324,
+          "temperature": 0.7208927747088472,
+          "thr_spec90": -0.3709976077079773,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.75,
+          "val_specificity": 0.9011194029850746
+        },
+        "dr": {
+          "n_pos": 1588,
+          "auroc_raw": 0.9125585732376764,
+          "temperature": 0.9611065859361113,
+          "thr_spec90": 0.14008936285972595,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.7361460957178841,
+          "val_specificity": 0.9004400440044005
+        },
+        "glaucoma": {
+          "n_pos": 173,
+          "auroc_raw": 0.8496797937372645,
+          "temperature": 0.9611065859361113,
+          "thr_spec90": -0.2727005183696747,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.5375722543352601,
+          "val_specificity": 0.9010791366906474
+        },
+        "csc": {
+          "n_pos": 12,
+          "auroc_raw": 0.9375,
+          "temperature": 1.0,
+          "thr_spec90": -2.4932773113250732,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.75,
+          "val_specificity": 0.9006211180124224
+        },
+        "disc_edema": {
+          "n_pos": 16,
+          "auroc_raw": 0.92333984375,
+          "temperature": 1.0,
+          "thr_spec90": -2.402862548828125,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8125,
+          "val_specificity": 0.9015625
+        },
+        "macular_scar": {
+          "n_pos": 51,
+          "auroc_raw": 0.8479662939555989,
+          "temperature": 0.8323738612412124,
+          "thr_spec90": -1.7387328147888184,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.5882352941176471,
+          "val_specificity": 0.9008264462809917
+        },
+        "myopia": {
+          "n_pos": 48,
+          "auroc_raw": 0.9755688048245614,
+          "temperature": 0.6854955224569818,
+          "thr_spec90": -2.155888795852661,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9375,
+          "val_specificity": 0.9013157894736842
+        },
+        "retinal_det": {
+          "n_pos": 18,
+          "auroc_raw": 0.9447056774642981,
+          "temperature": 1.0,
+          "thr_spec90": -2.86737060546875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9444444444444444,
+          "val_specificity": 0.9012539184952978
+        },
+        "retinitis_pig": {
+          "n_pos": 20,
+          "auroc_raw": 0.9965408805031446,
+          "temperature": 1.0,
+          "thr_spec90": -3.0056369304656982,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9009433962264151
+        }
+      },
+      "dr_auroc": 0.876385336743393,
+      "dr_aupr": 0.945108678168672,
+      "macro_auroc": 0.876385336743393,
+      "macro_aupr": 0.945108678168672,
+      "macro_ece": 0.1487711056054217,
+      "macro_ece_raw": 0.16253392416441323,
+      "dr_ece": 0.1487711056054217,
+      "dr_ece_raw": 0.16253392416441323,
+      "dr_brier": 0.1545264571905136,
+      "dr_sens_at_spec90": 0.9130434782608695,
+      "dr_spec_at_spec90": 0.5294117647058824,
+      "macro_sens_at_spec90": 0.9130434782608695
+    },
+    "stage1_seed44": {
+      "per_label": {
+        "normal": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "dr": {
+          "n_pos": 69,
+          "n_neg": 34,
+          "auroc": 0.8768115942028986,
+          "aupr": 0.9447931359107196,
+          "ece": 0.14515897078276838,
+          "brier": 0.15472425520420074,
+          "used_for_macro": true,
+          "exploratory": false,
+          "ece_raw": 0.14407110145514448,
+          "brier_raw": 0.15398764610290527,
+          "sensitivity_at_val_thr": 0.9130434782608695,
+          "specificity_at_val_thr": 0.47058823529411764
+        },
+        "glaucoma": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "csc": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "disc_edema": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "macular_scar": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "myopia": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinal_det": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinitis_pig": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "_macro_auroc": 0.8768115942028986,
+        "_macro_aupr": 0.9447931359107196,
+        "_macro_ece": 0.14515897078276838,
+        "_macro_labels": [
+          "dr"
+        ]
+      },
+      "per_dataset": {
+        "IDRID": {
+          "n": 103,
+          "dr_auroc": 0.8768115942028986,
+          "macro_auroc": 0.8768115942028986
+        }
+      },
+      "thresholds_at_spec90": {
+        "normal": -0.43179571628570557,
+        "dr": 0.12517531216144562,
+        "glaucoma": -0.24567414820194244,
+        "csc": -2.472228527069092,
+        "disc_edema": -2.489629030227661,
+        "macular_scar": -1.6754531860351562,
+        "myopia": -2.159036159515381,
+        "retinal_det": -2.889805316925049,
+        "retinitis_pig": -3.0413265228271484
+      },
+      "temperatures": {
+        "normal": 0.7581178513971014,
+        "dr": 0.9755111119790766,
+        "glaucoma": 0.9950535286973986,
+        "csc": 1.0,
+        "disc_edema": 1.0,
+        "macular_scar": 0.8039768484086092,
+        "myopia": 0.6854955224569818,
+        "retinal_det": 1.0,
+        "retinitis_pig": 1.0
+      },
+      "val_metrics_for_thresholds": {
+        "normal": {
+          "n_pos": 120,
+          "auroc_raw": 0.9255907960199005,
+          "temperature": 0.7581178513971014,
+          "thr_spec90": -0.43179571628570557,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.7416666666666667,
+          "val_specificity": 0.9011194029850746
+        },
+        "dr": {
+          "n_pos": 1588,
+          "auroc_raw": 0.91118967060434,
+          "temperature": 0.9755111119790766,
+          "thr_spec90": 0.12517531216144562,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.7424433249370277,
+          "val_specificity": 0.9004400440044005
+        },
+        "glaucoma": {
+          "n_pos": 173,
+          "auroc_raw": 0.8476317212126252,
+          "temperature": 0.9950535286973986,
+          "thr_spec90": -0.24567414820194244,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.5202312138728323,
+          "val_specificity": 0.9010791366906474
+        },
+        "csc": {
+          "n_pos": 12,
+          "auroc_raw": 0.9262422360248447,
+          "temperature": 1.0,
+          "thr_spec90": -2.472228527069092,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.75,
+          "val_specificity": 0.9006211180124224
+        },
+        "disc_edema": {
+          "n_pos": 16,
+          "auroc_raw": 0.9256835937500001,
+          "temperature": 1.0,
+          "thr_spec90": -2.489629030227661,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8125,
+          "val_specificity": 0.9015625
+        },
+        "macular_scar": {
+          "n_pos": 51,
+          "auroc_raw": 0.8568789499270782,
+          "temperature": 0.8039768484086092,
+          "thr_spec90": -1.6754531860351562,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.5686274509803921,
+          "val_specificity": 0.9008264462809917
+        },
+        "myopia": {
+          "n_pos": 48,
+          "auroc_raw": 0.976733826754386,
+          "temperature": 0.6854955224569818,
+          "thr_spec90": -2.159036159515381,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9583333333333334,
+          "val_specificity": 0.9013157894736842
+        },
+        "retinal_det": {
+          "n_pos": 18,
+          "auroc_raw": 0.9434865900383144,
+          "temperature": 1.0,
+          "thr_spec90": -2.889805316925049,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9444444444444444,
+          "val_specificity": 0.9012539184952978
+        },
+        "retinitis_pig": {
+          "n_pos": 20,
+          "auroc_raw": 0.9968553459119497,
+          "temperature": 1.0,
+          "thr_spec90": -3.0413265228271484,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9009433962264151
+        }
+      },
+      "dr_auroc": 0.8768115942028986,
+      "dr_aupr": 0.9447931359107196,
+      "macro_auroc": 0.8768115942028986,
+      "macro_aupr": 0.9447931359107196,
+      "macro_ece": 0.14515897078276838,
+      "macro_ece_raw": 0.14407110145514448,
+      "dr_ece": 0.14515897078276838,
+      "dr_ece_raw": 0.14407110145514448,
+      "dr_brier": 0.15472425520420074,
+      "dr_sens_at_spec90": 0.9130434782608695,
+      "dr_spec_at_spec90": 0.47058823529411764,
+      "macro_sens_at_spec90": 0.9130434782608695
+    },
+    "stage2_seed42": {
+      "per_label": {
+        "normal": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "dr": {
+          "n_pos": 69,
+          "n_neg": 34,
+          "auroc": 0.8363171355498722,
+          "aupr": 0.8898184789547947,
+          "ece": 0.19930564257705097,
+          "brier": 0.2130502164363861,
+          "used_for_macro": true,
+          "exploratory": false,
+          "ece_raw": 0.21164823837071944,
+          "brier_raw": 0.22195874154567719,
+          "sensitivity_at_val_thr": 0.8985507246376812,
+          "specificity_at_val_thr": 0.5
+        },
+        "glaucoma": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "csc": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "disc_edema": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "macular_scar": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "myopia": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinal_det": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinitis_pig": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "_macro_auroc": 0.8363171355498722,
+        "_macro_aupr": 0.8898184789547947,
+        "_macro_ece": 0.19930564257705097,
+        "_macro_labels": [
+          "dr"
+        ]
+      },
+      "per_dataset": {
+        "IDRID": {
+          "n": 103,
+          "dr_auroc": 0.8363171355498722,
+          "macro_auroc": 0.8363171355498722
+        }
+      },
+      "thresholds_at_spec90": {
+        "normal": -3.546875,
+        "dr": -0.7421875,
+        "glaucoma": -3.265625,
+        "csc": -3.578125,
+        "disc_edema": -3.59375,
+        "macular_scar": -3.578125,
+        "myopia": -3.5,
+        "retinal_det": -3.359375,
+        "retinitis_pig": -3.5625
+      },
+      "temperatures": {
+        "normal": 1.1546573369122095,
+        "dr": 1.2133572178228789,
+        "glaucoma": 1.3871688482435938,
+        "csc": 1.0,
+        "disc_edema": 1.0,
+        "macular_scar": 1.0,
+        "myopia": 0.9055842968854534,
+        "retinal_det": 1.0,
+        "retinitis_pig": 1.0
+      },
+      "val_metrics_for_thresholds": {
+        "normal": {
+          "n_pos": 120,
+          "auroc_raw": 0.9776663557213932,
+          "temperature": 1.1546573369122095,
+          "thr_spec90": -3.546875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.925,
+          "val_specificity": 0.9048507462686567
+        },
+        "dr": {
+          "n_pos": 1588,
+          "auroc_raw": 0.9525478838815871,
+          "temperature": 1.2133572178228789,
+          "thr_spec90": -0.7421875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9011335012594458,
+          "val_specificity": 0.9004400440044005
+        },
+        "glaucoma": {
+          "n_pos": 173,
+          "auroc_raw": 0.9379600365950014,
+          "temperature": 1.3871688482435938,
+          "thr_spec90": -3.265625,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.884393063583815,
+          "val_specificity": 0.9010791366906474
+        },
+        "csc": {
+          "n_pos": 12,
+          "auroc_raw": 0.910455486542443,
+          "temperature": 1.0,
+          "thr_spec90": -3.578125,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8333333333333334,
+          "val_specificity": 0.9006211180124224
+        },
+        "disc_edema": {
+          "n_pos": 16,
+          "auroc_raw": 0.99970703125,
+          "temperature": 1.0,
+          "thr_spec90": -3.59375,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9390625
+        },
+        "macular_scar": {
+          "n_pos": 51,
+          "auroc_raw": 0.9565710581753362,
+          "temperature": 1.0,
+          "thr_spec90": -3.578125,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9019607843137255,
+          "val_specificity": 0.9090909090909091
+        },
+        "myopia": {
+          "n_pos": 48,
+          "auroc_raw": 0.9787212171052632,
+          "temperature": 0.9055842968854534,
+          "thr_spec90": -3.5,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9166666666666666,
+          "val_specificity": 0.90625
+        },
+        "retinal_det": {
+          "n_pos": 18,
+          "auroc_raw": 0.9730059212817833,
+          "temperature": 1.0,
+          "thr_spec90": -3.359375,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9444444444444444,
+          "val_specificity": 0.9310344827586207
+        },
+        "retinitis_pig": {
+          "n_pos": 20,
+          "auroc_raw": 0.9998427672955975,
+          "temperature": 1.0,
+          "thr_spec90": -3.5625,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.949685534591195
+        }
+      },
+      "dr_auroc": 0.8363171355498722,
+      "dr_aupr": 0.8898184789547947,
+      "macro_auroc": 0.8363171355498722,
+      "macro_aupr": 0.8898184789547947,
+      "macro_ece": 0.19930564257705097,
+      "macro_ece_raw": 0.21164823837071944,
+      "dr_ece": 0.19930564257705097,
+      "dr_ece_raw": 0.21164823837071944,
+      "dr_brier": 0.2130502164363861,
+      "dr_sens_at_spec90": 0.8985507246376812,
+      "dr_spec_at_spec90": 0.5,
+      "macro_sens_at_spec90": 0.8985507246376812
+    },
+    "stage2_seed43": {
+      "per_label": {
+        "normal": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "dr": {
+          "n_pos": 69,
+          "n_neg": 34,
+          "auroc": 0.8205456095481672,
+          "aupr": 0.8860481670708101,
+          "ece": 0.1380924407428908,
+          "brier": 0.17217038571834564,
+          "used_for_macro": true,
+          "exploratory": false,
+          "ece_raw": 0.14360918654400168,
+          "brier_raw": 0.17243453860282898,
+          "sensitivity_at_val_thr": 0.8985507246376812,
+          "specificity_at_val_thr": 0.5882352941176471
+        },
+        "glaucoma": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "csc": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "disc_edema": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "macular_scar": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "myopia": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinal_det": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinitis_pig": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "_macro_auroc": 0.8205456095481672,
+        "_macro_aupr": 0.8860481670708101,
+        "_macro_ece": 0.1380924407428908,
+        "_macro_labels": [
+          "dr"
+        ]
+      },
+      "per_dataset": {
+        "IDRID": {
+          "n": 103,
+          "dr_auroc": 0.8205456095481672,
+          "macro_auroc": 0.8205456095481672
+        }
+      },
+      "thresholds_at_spec90": {
+        "normal": -2.328125,
+        "dr": -0.068359375,
+        "glaucoma": -0.298828125,
+        "csc": -3.3125,
+        "disc_edema": -3.109375,
+        "macular_scar": -3.296875,
+        "myopia": -3.359375,
+        "retinal_det": -3.6875,
+        "retinitis_pig": -3.59375
+      },
+      "temperatures": {
+        "normal": 1.020033002677617,
+        "dr": 1.0099668324641247,
+        "glaucoma": 1.3190561311241311,
+        "csc": 1.0,
+        "disc_edema": 1.0,
+        "macular_scar": 0.9852338677990639,
+        "myopia": 0.9422308723474415,
+        "retinal_det": 1.0,
+        "retinitis_pig": 1.0
+      },
+      "val_metrics_for_thresholds": {
+        "normal": {
+          "n_pos": 120,
+          "auroc_raw": 0.9675606343283581,
+          "temperature": 1.020033002677617,
+          "thr_spec90": -2.328125,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9416666666666667,
+          "val_specificity": 0.9011194029850746
+        },
+        "dr": {
+          "n_pos": 1588,
+          "auroc_raw": 0.9472686720813139,
+          "temperature": 1.0099668324641247,
+          "thr_spec90": -0.068359375,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8375314861460957,
+          "val_specificity": 0.9004400440044005
+        },
+        "glaucoma": {
+          "n_pos": 173,
+          "auroc_raw": 0.9359223603775938,
+          "temperature": 1.3190561311241311,
+          "thr_spec90": -0.298828125,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8786127167630058,
+          "val_specificity": 0.9010791366906474
+        },
+        "csc": {
+          "n_pos": 12,
+          "auroc_raw": 0.9556159420289855,
+          "temperature": 1.0,
+          "thr_spec90": -3.3125,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8333333333333334,
+          "val_specificity": 0.90527950310559
+        },
+        "disc_edema": {
+          "n_pos": 16,
+          "auroc_raw": 0.9990234375000001,
+          "temperature": 1.0,
+          "thr_spec90": -3.109375,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9015625
+        },
+        "macular_scar": {
+          "n_pos": 51,
+          "auroc_raw": 0.962583049748825,
+          "temperature": 0.9852338677990639,
+          "thr_spec90": -3.296875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8823529411764706,
+          "val_specificity": 0.9008264462809917
+        },
+        "myopia": {
+          "n_pos": 48,
+          "auroc_raw": 0.9727419133771931,
+          "temperature": 0.9422308723474415,
+          "thr_spec90": -3.359375,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9375,
+          "val_specificity": 0.9013157894736842
+        },
+        "retinal_det": {
+          "n_pos": 18,
+          "auroc_raw": 0.9990421455938697,
+          "temperature": 1.0,
+          "thr_spec90": -3.6875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9028213166144201
+        },
+        "retinitis_pig": {
+          "n_pos": 20,
+          "auroc_raw": 0.9985455974842767,
+          "temperature": 1.0,
+          "thr_spec90": -3.59375,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.910377358490566
+        }
+      },
+      "dr_auroc": 0.8205456095481672,
+      "dr_aupr": 0.8860481670708101,
+      "macro_auroc": 0.8205456095481672,
+      "macro_aupr": 0.8860481670708101,
+      "macro_ece": 0.1380924407428908,
+      "macro_ece_raw": 0.14360918654400168,
+      "dr_ece": 0.1380924407428908,
+      "dr_ece_raw": 0.14360918654400168,
+      "dr_brier": 0.17217038571834564,
+      "dr_sens_at_spec90": 0.8985507246376812,
+      "dr_spec_at_spec90": 0.5882352941176471,
+      "macro_sens_at_spec90": 0.8985507246376812
+    },
+    "stage2_seed44": {
+      "per_label": {
+        "normal": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "dr": {
+          "n_pos": 69,
+          "n_neg": 34,
+          "auroc": 0.8343989769820973,
+          "aupr": 0.9173728956574575,
+          "ece": 0.16802821691753794,
+          "brier": 0.1786195933818817,
+          "used_for_macro": true,
+          "exploratory": false,
+          "ece_raw": 0.1894367559297571,
+          "brier_raw": 0.18533071875572205,
+          "sensitivity_at_val_thr": 0.8405797101449275,
+          "specificity_at_val_thr": 0.5882352941176471
+        },
+        "glaucoma": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "csc": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "disc_edema": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "macular_scar": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "myopia": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": false,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinal_det": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "retinitis_pig": {
+          "n_pos": 0,
+          "n_neg": 0,
+          "auroc": NaN,
+          "aupr": NaN,
+          "ece": NaN,
+          "brier": NaN,
+          "used_for_macro": false,
+          "exploratory": true,
+          "ece_raw": NaN,
+          "brier_raw": NaN,
+          "sensitivity_at_val_thr": NaN,
+          "specificity_at_val_thr": NaN
+        },
+        "_macro_auroc": 0.8343989769820973,
+        "_macro_aupr": 0.9173728956574575,
+        "_macro_ece": 0.16802821691753794,
+        "_macro_labels": [
+          "dr"
+        ]
+      },
+      "per_dataset": {
+        "IDRID": {
+          "n": 103,
+          "dr_auroc": 0.8343989769820973,
+          "macro_auroc": 0.8343989769820973
+        }
+      },
+      "thresholds_at_spec90": {
+        "normal": -0.9921875,
+        "dr": -1.0546875,
+        "glaucoma": -1.546875,
+        "csc": -3.375,
+        "disc_edema": -3.671875,
+        "macular_scar": -3.171875,
+        "myopia": -2.5625,
+        "retinal_det": -3.65625,
+        "retinitis_pig": -3.34375
+      },
+      "temperatures": {
+        "normal": 0.8,
+        "dr": 1.2542878823001253,
+        "glaucoma": 1.0933620739432781,
+        "csc": 1.0,
+        "disc_edema": 1.0,
+        "macular_scar": 0.8365116420730186,
+        "myopia": 0.8365116420730186,
+        "retinal_det": 1.0,
+        "retinitis_pig": 1.0
+      },
+      "val_metrics_for_thresholds": {
+        "normal": {
+          "n_pos": 120,
+          "auroc_raw": 0.9672807835820896,
+          "temperature": 0.8,
+          "thr_spec90": -0.9921875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9166666666666666,
+          "val_specificity": 0.9011194029850746
+        },
+        "dr": {
+          "n_pos": 1588,
+          "auroc_raw": 0.9495222349690888,
+          "temperature": 1.2542878823001253,
+          "thr_spec90": -1.0546875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8387909319899244,
+          "val_specificity": 0.9004400440044005
+        },
+        "glaucoma": {
+          "n_pos": 173,
+          "auroc_raw": 0.9329854035846468,
+          "temperature": 1.0933620739432781,
+          "thr_spec90": -1.546875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.861271676300578,
+          "val_specificity": 0.9010791366906474
+        },
+        "csc": {
+          "n_pos": 12,
+          "auroc_raw": 0.9637681159420289,
+          "temperature": 1.0,
+          "thr_spec90": -3.375,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.8333333333333334,
+          "val_specificity": 0.9006211180124224
+        },
+        "disc_edema": {
+          "n_pos": 16,
+          "auroc_raw": 0.998583984375,
+          "temperature": 1.0,
+          "thr_spec90": -3.671875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9046875
+        },
+        "macular_scar": {
+          "n_pos": 51,
+          "auroc_raw": 0.9805542051531356,
+          "temperature": 0.8365116420730186,
+          "thr_spec90": -3.171875,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9607843137254902,
+          "val_specificity": 0.9024793388429752
+        },
+        "myopia": {
+          "n_pos": 48,
+          "auroc_raw": 0.9671737938596491,
+          "temperature": 0.8365116420730186,
+          "thr_spec90": -2.5625,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 0.9583333333333334,
+          "val_specificity": 0.9013157894736842
+        },
+        "retinal_det": {
+          "n_pos": 18,
+          "auroc_raw": 0.9963862765586904,
+          "temperature": 1.0,
+          "thr_spec90": -3.65625,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9012539184952978
+        },
+        "retinitis_pig": {
+          "n_pos": 20,
+          "auroc_raw": 0.9998427672955975,
+          "temperature": 1.0,
+          "thr_spec90": -3.34375,
+          "decision_rule": "positive if score > thr",
+          "val_sensitivity": 1.0,
+          "val_specificity": 0.9119496855345912
+        }
+      },
+      "dr_auroc": 0.8343989769820973,
+      "dr_aupr": 0.9173728956574575,
+      "macro_auroc": 0.8343989769820973,
+      "macro_aupr": 0.9173728956574575,
+      "macro_ece": 0.16802821691753794,
+      "macro_ece_raw": 0.1894367559297571,
+      "dr_ece": 0.16802821691753794,
+      "dr_ece_raw": 0.1894367559297571,
+      "dr_brier": 0.1786195933818817,
+      "dr_sens_at_spec90": 0.8405797101449275,
+      "dr_spec_at_spec90": 0.5882352941176471,
+      "macro_sens_at_spec90": 0.8405797101449275
+    }
+  },
+  "stage_summary": {
+    "stage1_dr_auroc": {
+      "point": 0.8772378516624041,
+      "ci95": [
+        0.8413440525531769,
+        0.9128907367587089
+      ],
+      "per_seed": [
+        0.8785166240409207,
+        0.876385336743393,
+        0.8768115942028986
+      ]
+    },
+    "stage1_macro_auroc": {
+      "point": 0.8772378516624041,
+      "ci95": [
+        0.8413440525531769,
+        0.9128907367587089
+      ],
+      "per_seed": [
+        0.8785166240409207,
+        0.876385336743393,
+        0.8768115942028986
+      ]
+    },
+    "stage1_dr_aupr": {
+      "point": 0.9452683432489796,
+      "ci95": [
+        0.9257985830307007,
+        0.9635163158178329
+      ],
+      "per_seed": [
+        0.9459032156675471,
+        0.945108678168672,
+        0.9447931359107196
+      ]
+    },
+    "stage2_dr_auroc": {
+      "point": 0.8304205740267122,
+      "ci95": [
+        0.7789555802941323,
+        0.8771456554532051
+      ],
+      "per_seed": [
+        0.8363171355498722,
+        0.8205456095481672,
+        0.8343989769820973
+      ]
+    },
+    "stage2_macro_auroc": {
+      "point": 0.8304205740267122,
+      "ci95": [
+        0.7789555802941323,
+        0.8771456554532051
+      ],
+      "per_seed": [
+        0.8363171355498722,
+        0.8205456095481672,
+        0.8343989769820973
+      ]
+    },
+    "stage2_dr_aupr": {
+      "point": 0.897746513894354,
+      "ci95": [
+        0.8563314378261566,
+        0.9399598464369774
+      ],
+      "per_seed": [
+        0.8898184789547947,
+        0.8860481670708101,
+        0.9173728956574575
+      ]
+    }
+  },
+  "paired_delta_stage2_minus_stage1": {
+    "dr_auroc": {
+      "seed42_delta_point": -0.04219948849104849,
+      "seed42_delta_ci95": [
+        -0.15258723497390747,
+        0.05483566373586654
+      ],
+      "seed42_p_two_sided": 0.442,
+      "seedmean_delta_point": -0.04681727763569188,
+      "seedmean_delta_ci95": [
+        -0.10765684396028519,
+        0.013298663496971072
+      ],
+      "seedmean_p_two_sided": 0.134
+    },
+    "macro_auroc": {
+      "seed42_delta_point": -0.04219948849104849,
+      "seed42_delta_ci95": [
+        -0.15258723497390747,
+        0.05483566373586654
+      ],
+      "seed42_p_two_sided": 0.442,
+      "seedmean_delta_point": -0.04681727763569188,
+      "seedmean_delta_ci95": [
+        -0.10765684396028519,
+        0.013298663496971072
+      ],
+      "seedmean_p_two_sided": 0.134
+    },
+    "dr_aupr": {
+      "seed42_delta_point": -0.05608473671275238,
+      "seed42_delta_ci95": [
+        -0.14499534517526627,
+        0.027179791033267935
+      ],
+      "seed42_p_two_sided": 0.248,
+      "seedmean_delta_point": -0.04752182935462557,
+      "seedmean_delta_ci95": [
+        -0.09234142899513245,
+        0.00022401809692382214
+      ],
+      "seedmean_p_two_sided": 0.054
+    }
+  },
+  "bootstrap": {
+    "reps": 1000,
+    "seed": 20261109,
+    "resampling_unit": "group_id (whole dedup group)",
+    "n_groups": 103
+  },
+  "self_check_vs_run_json": null,
+  "seconds": 181.4
+}

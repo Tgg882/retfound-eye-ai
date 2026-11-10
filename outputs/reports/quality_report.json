@@ -1,0 +1,23 @@
+{
+  "n": 23299,
+  "n_decode_failed": 0,
+  "blur_threshold_p1_train": 58.51033275750699,
+  "flag_counts": {
+    "good": 21890,
+    "usable": 1167,
+    "reject": 242
+  },
+  "reject_fraction": 0.010386711876046182,
+  "reject_by_dataset": {
+    "APTOS2019": 118,
+    "DDR": 76,
+    "PAPILA": 48
+  },
+  "issue_counts": {
+    "blur": 240,
+    "dark": 2,
+    "light": 0,
+    "grayscale": 0,
+    "decode_failed": 0
+  }
+}

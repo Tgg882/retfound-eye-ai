@@ -1,0 +1,152 @@
+{
+  "tag": "v1",
+  "built_at": "2026-11-06T18:36:35",
+  "smoke_limit_per_source": null,
+  "rows_total": 23294,
+  "rows_by_dataset": {
+    "DDR": 12519,
+    "Fundus10": 4374,
+    "APTOS2019": 3654,
+    "MESSIDOR-2": 1744,
+    "IDRID": 515,
+    "PAPILA": 488
+  },
+  "rows_by_split": {
+    "train": 16238,
+    "test": 3577,
+    "val": 3479
+  },
+  "expected_rows": {
+    "DDR": 12522,
+    "Fundus10": 4376,
+    "APTOS2019": 3654,
+    "MESSIDOR-2": 1744,
+    "IDRID": 515,
+    "PAPILA": 488
+  },
+  "row_count_match_expected": {
+    "DDR": false,
+    "Fundus10": false,
+    "APTOS2019": true,
+    "MESSIDOR-2": true,
+    "IDRID": true,
+    "PAPILA": true
+  },
+  "dedup": {
+    "source": "outputs\\manifest\\manifest_v0_clean.csv + embedding map outputs\\manifest\\dedup_groups_v1.csv",
+    "n_rows": 23299,
+    "n_groups": 22678,
+    "n_multi_member_groups": 548,
+    "max_group_size": 11,
+    "n_phash_failures": 0,
+    "n_cross_dataset_groups": 0,
+    "n_groups_before_embedding_dedup": 22887,
+    "n_merge_edges": 209
+  },
+  "exact_duplicate_label_conflicts": {
+    "rows_in_exact_dup_groups": 470,
+    "groups": 231,
+    "conflicting_groups": 0,
+    "by_dataset": {
+      "APTOS2019": {
+        "rows_in_exact_dup_groups": 243,
+        "groups": 119,
+        "conflicting_groups": 0
+      },
+      "DDR": {
+        "rows_in_exact_dup_groups": 197,
+        "groups": 97,
+        "conflicting_groups": 0
+      },
+      "Fundus10": {
+        "rows_in_exact_dup_groups": 12,
+        "groups": 6,
+        "conflicting_groups": 0
+      },
+      "IDRID": {
+        "rows_in_exact_dup_groups": 10,
+        "groups": 5,
+        "conflicting_groups": 0
+      },
+      "MESSIDOR-2": {
+        "rows_in_exact_dup_groups": 8,
+        "groups": 4,
+        "conflicting_groups": 0
+      }
+    },
+    "label_consistent": true,
+    "note": "byte-identical images share one group_id and carry consistent labels; no label conflicts remain"
+  },
+  "splits": {
+    "policy": "group-aware greedy stratified 70/15/15 (seed=42)",
+    "warnings": [],
+    "strata": 19
+  },
+  "idrid_external_holdout": {
+    "n": 103,
+    "expected": 103,
+    "all_legacy_test": true
+  },
+  "gates": {
+    "G1_forbidden_path_rows": 0,
+    "G1_pterygium_rows": 0,
+    "G1_ddr_label5_rows": 0,
+    "G2_cross_split_groups": 0,
+    "G4_mask_violations": 0,
+    "G4_rows_without_supervision": 0,
+    "G3_embedding_guard": {
+      "status": "applied",
+      "rule": "pHash Hamming<=24 to a train image AND centred cosine>=0.99",
+      "n_test": 3582,
+      "n_candidate_pairs_pHash<=24": 283,
+      "n_test_dropped": 5,
+      "fraction_test_dropped": 0.0013958682300390843,
+      "max_test_to_train_cosine_among_candidates": 0.9947550296783447,
+      "min_pHash_hamming_to_train_min": 8,
+      "min_pHash_hamming_to_train_p01": 16
+    }
+  },
+  "clean_baseline": {
+    "source": "outputs\\manifest\\manifest_v0_clean.csv",
+    "clean_rows": 23299,
+    "rows_by_dataset": {
+      "DDR": 12522,
+      "Fundus10": 4376,
+      "APTOS2019": 3654,
+      "MESSIDOR-2": 1744,
+      "IDRID": 515,
+      "PAPILA": 488
+    },
+    "holdout_protected_groups": [
+      {
+        "sha1": "ce0f7b5f6b381b61bbefbc79f388aaf0b360091e",
+        "kept": "dataset/03_IDRID\\test\\class_3\\IDRiD_064_1.jpg",
+        "dropped": "dataset/03_IDRID\\train\\class_0\\IDRiD_118.jpg"
+      }
+    ],
+    "conflict_groups_removed": 469,
+    "rows_removed_by_conflict_clean": 951
+  },
+  "rows_after_leakage_guard": 23294,
+  "leakage_guard_dropped": 5,
+  "holdout_protected_groups": [
+    {
+      "sha1": "ce0f7b5f6b381b61bbefbc79f388aaf0b360091e",
+      "kept": "dataset/03_IDRID\\test\\class_3\\IDRiD_064_1.jpg",
+      "dropped": "dataset/03_IDRID\\train\\class_0\\IDRiD_118.jpg"
+    }
+  ],
+  "leakage_guard_dropped_by_dataset": {
+    "DDR": 3,
+    "Fundus10": 2
+  },
+  "quality": {
+    "n": 23299,
+    "flag_counts": {
+      "good": 21890,
+      "usable": 1167,
+      "reject": 242
+    },
+    "reject_fraction": 0.010386711876046182
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": "cfp9-v1",
+  "labels": [
+    "normal",
+    "dr",
+    "glaucoma",
+    "csc",
+    "disc_edema",
+    "macular_scar",
+    "myopia",
+    "retinal_det",
+    "retinitis_pig"
+  ]
+}

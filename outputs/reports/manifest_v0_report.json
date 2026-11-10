@@ -1,0 +1,102 @@
+{
+  "tag": "v0",
+  "built_at": "2026-11-06T17:13:52",
+  "smoke_limit_per_source": null,
+  "rows_total": 24250,
+  "rows_by_dataset": {
+    "DDR": 12522,
+    "Fundus10": 5318,
+    "APTOS2019": 3662,
+    "MESSIDOR-2": 1744,
+    "IDRID": 516,
+    "PAPILA": 488
+  },
+  "rows_by_split": {
+    "train": 16902,
+    "test": 3726,
+    "val": 3622
+  },
+  "expected_rows": {
+    "MESSIDOR-2": 1744,
+    "APTOS2019": 3662,
+    "IDRID": 516,
+    "DDR": 12522,
+    "Fundus10": 5318,
+    "PAPILA": 488
+  },
+  "row_count_match_expected": {
+    "DDR": true,
+    "Fundus10": true,
+    "APTOS2019": true,
+    "MESSIDOR-2": true,
+    "IDRID": true,
+    "PAPILA": true
+  },
+  "dedup": {
+    "n_rows": 24250,
+    "n_groups": 23335,
+    "n_multi_member_groups": 865,
+    "max_group_size": 4,
+    "phash_bits": 256,
+    "phash_max_hamming": 6,
+    "phash_note": "plan said 64-bit pHash; 64-bit collapsed into one 19372-image component on fundus images, so 256-bit pHash with the same Hamming<=6 was used",
+    "n_phash_failures": 0,
+    "n_phash_edges": 207,
+    "n_exact_duplicate_rows_same_dataset": 722,
+    "n_cross_dataset_exact_duplicate_groups": 0,
+    "cross_dataset_exact_duplicates": [],
+    "n_cross_dataset_groups": 0
+  },
+  "exact_duplicate_label_conflicts": {
+    "rows_in_exact_dup_groups": 1422,
+    "groups": 700,
+    "conflicting_groups": 469,
+    "by_dataset": {
+      "APTOS2019": {
+        "rows_in_exact_dup_groups": 251,
+        "groups": 123,
+        "conflicting_groups": 4
+      },
+      "DDR": {
+        "rows_in_exact_dup_groups": 197,
+        "groups": 97,
+        "conflicting_groups": 0
+      },
+      "Fundus10": {
+        "rows_in_exact_dup_groups": 954,
+        "groups": 470,
+        "conflicting_groups": 464
+      },
+      "IDRID": {
+        "rows_in_exact_dup_groups": 12,
+        "groups": 6,
+        "conflicting_groups": 1
+      },
+      "MESSIDOR-2": {
+        "rows_in_exact_dup_groups": 8,
+        "groups": 4,
+        "conflicting_groups": 0
+      }
+    },
+    "note": "identical bytes with different labels; v0 keeps them (pipeline only) and must be resolved before manifest v1"
+  },
+  "splits": {
+    "policy": "group-aware greedy stratified 70/15/15 (seed=42)",
+    "warnings": [],
+    "strata": 19
+  },
+  "idrid_external_holdout": {
+    "n": 103,
+    "expected": 103,
+    "all_legacy_test": true
+  },
+  "gates": {
+    "G1_forbidden_path_rows": 0,
+    "G1_pterygium_rows": 0,
+    "G1_ddr_label5_rows": 0,
+    "G2_cross_split_groups": 0,
+    "G4_mask_violations": 0,
+    "G4_rows_without_supervision": 0,
+    "G3_embedding_guard": "pending (manifest v1)"
+  }
+}

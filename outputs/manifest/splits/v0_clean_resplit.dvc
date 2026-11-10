@@ -1,0 +1,6 @@
+outs:
+- md5: ef6584c16b3c5ffd9e8421d89e9ae302.dir
+  size: 7282923
+  nfiles: 4
+  hash: md5
+  path: v0_clean_resplit

@@ -1,0 +1,6 @@
+path,max_test_to_train_cosine
+DDR-dataset/DR_grading/train/007-3501-200.jpg,0.9947550296783448
+DDR-dataset/DR_grading/train/007-3832-200.jpg,0.9935686588287354
+DDR-dataset/DR_grading/valid/007-5381-300.jpg,0.9929355382919312
+_raw/Fundus10/images/original/Healthy/Healthy833.jpg,0.9924418330192566
+_raw/Fundus10/images/original/Healthy/Healthy849.jpg,0.9925939440727234

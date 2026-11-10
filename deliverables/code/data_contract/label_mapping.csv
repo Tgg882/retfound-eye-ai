@@ -1,0 +1,34 @@
+dataset,source_label,label_key,y,note
+MESSIDOR-2,class_0,dr,0,"Grade 0 = no DR; normal is NOT set to 1"
+MESSIDOR-2,class_1,dr,1,Grade 1
+MESSIDOR-2,class_2,dr,1,Grade 2
+MESSIDOR-2,class_3,dr,1,Grade 3
+MESSIDOR-2,class_4,dr,1,Grade 4
+APTOS2019,class_0,dr,0,"Grade 0 = no DR; normal is NOT set to 1"
+APTOS2019,class_1,dr,1,Grade 1
+APTOS2019,class_2,dr,1,Grade 2
+APTOS2019,class_3,dr,1,Grade 3
+APTOS2019,class_4,dr,1,Grade 4
+IDRID,class_0,dr,0,"Grade 0 = no DR; normal is NOT set to 1"
+IDRID,class_1,dr,1,Grade 1
+IDRID,class_2,dr,1,Grade 2
+IDRID,class_3,dr,1,Grade 3
+IDRID,class_4,dr,1,Grade 4
+DDR,0,dr,0,Grade 0 = no DR
+DDR,1,dr,1,Grade 1
+DDR,2,dr,1,Grade 2
+DDR,3,dr,1,Grade 3
+DDR,4,dr,1,Grade 4
+DDR,5,,,"DROP: ungradable (1151 rows)"
+Fundus10,CSC,csc,1,Healthy is NOT set; other 8 labels are 0
+Fundus10,DR,dr,1,Single-label one-hot; other 8 labels are 0
+Fundus10,DiscEdema,disc_edema,1,Single-label one-hot; other 8 labels are 0
+Fundus10,Glaucoma,glaucoma,1,Single-label one-hot; other 8 labels are 0
+Fundus10,Healthy,normal,1,Single-label one-hot; other 8 labels are 0
+Fundus10,MacularScar,macular_scar,1,Single-label one-hot; other 8 labels are 0
+Fundus10,Myopia,myopia,1,Single-label one-hot; other 8 labels are 0
+Fundus10,Pterygium,,,"DROP: out of scope (17 rows)"
+Fundus10,RetinalDet,retinal_det,1,Single-label one-hot; other 8 labels are 0
+Fundus10,RetinitisPig,retinitis_pig,1,Single-label one-hot; other 8 labels are 0
+PAPILA,class_0,glaucoma,0,"non-glaucoma (healthy | no glaucoma); normal is NOT set to 1"
+PAPILA,class_1,glaucoma,1,glaucoma present | suspect

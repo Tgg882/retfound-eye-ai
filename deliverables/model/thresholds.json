@@ -1,0 +1,347 @@
+{
+  "version": "cfp9-v1",
+  "fitted_on": "val split only",
+  "target_specificity": 0.9,
+  "decision_rule": "positive if raw_logit > threshold",
+  "primary_model": "stage2_seed42",
+  "note": "Thresholds were fitted once on val and applied unchanged to test and to the IDRID official test holdout.",
+  "models": {
+    "stage1_seed42": {
+      "normal": {
+        "threshold": -0.42324399948120117,
+        "val_sensitivity": 0.7416666666666667,
+        "val_specificity": 0.9011194029850746,
+        "val_n_pos": 120
+      },
+      "dr": {
+        "threshold": 0.12180545926094055,
+        "val_sensitivity": 0.7399244332493703,
+        "val_specificity": 0.9004400440044005,
+        "val_n_pos": 1588
+      },
+      "glaucoma": {
+        "threshold": -0.29523754119873047,
+        "val_sensitivity": 0.5433526011560693,
+        "val_specificity": 0.9010791366906474,
+        "val_n_pos": 173
+      },
+      "csc": {
+        "threshold": -2.5771214962005615,
+        "val_sensitivity": 0.8333333333333334,
+        "val_specificity": 0.9006211180124224,
+        "val_n_pos": 12
+      },
+      "disc_edema": {
+        "threshold": -2.4562392234802246,
+        "val_sensitivity": 0.8125,
+        "val_specificity": 0.9015625,
+        "val_n_pos": 16
+      },
+      "macular_scar": {
+        "threshold": -1.5781198740005493,
+        "val_sensitivity": 0.5686274509803921,
+        "val_specificity": 0.9008264462809917,
+        "val_n_pos": 51
+      },
+      "myopia": {
+        "threshold": -2.1645452976226807,
+        "val_sensitivity": 0.9791666666666666,
+        "val_specificity": 0.9013157894736842,
+        "val_n_pos": 48
+      },
+      "retinal_det": {
+        "threshold": -2.851992607116699,
+        "val_sensitivity": 0.9444444444444444,
+        "val_specificity": 0.9012539184952978,
+        "val_n_pos": 18
+      },
+      "retinitis_pig": {
+        "threshold": -2.9920663833618164,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9009433962264151,
+        "val_n_pos": 20
+      }
+    },
+    "stage1_seed43": {
+      "normal": {
+        "threshold": -0.3709976077079773,
+        "val_sensitivity": 0.75,
+        "val_specificity": 0.9011194029850746,
+        "val_n_pos": 120
+      },
+      "dr": {
+        "threshold": 0.14008936285972595,
+        "val_sensitivity": 0.7361460957178841,
+        "val_specificity": 0.9004400440044005,
+        "val_n_pos": 1588
+      },
+      "glaucoma": {
+        "threshold": -0.2727005183696747,
+        "val_sensitivity": 0.5375722543352601,
+        "val_specificity": 0.9010791366906474,
+        "val_n_pos": 173
+      },
+      "csc": {
+        "threshold": -2.4932773113250732,
+        "val_sensitivity": 0.75,
+        "val_specificity": 0.9006211180124224,
+        "val_n_pos": 12
+      },
+      "disc_edema": {
+        "threshold": -2.402862548828125,
+        "val_sensitivity": 0.8125,
+        "val_specificity": 0.9015625,
+        "val_n_pos": 16
+      },
+      "macular_scar": {
+        "threshold": -1.7387328147888184,
+        "val_sensitivity": 0.5882352941176471,
+        "val_specificity": 0.9008264462809917,
+        "val_n_pos": 51
+      },
+      "myopia": {
+        "threshold": -2.155888795852661,
+        "val_sensitivity": 0.9375,
+        "val_specificity": 0.9013157894736842,
+        "val_n_pos": 48
+      },
+      "retinal_det": {
+        "threshold": -2.86737060546875,
+        "val_sensitivity": 0.9444444444444444,
+        "val_specificity": 0.9012539184952978,
+        "val_n_pos": 18
+      },
+      "retinitis_pig": {
+        "threshold": -3.0056369304656982,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9009433962264151,
+        "val_n_pos": 20
+      }
+    },
+    "stage1_seed44": {
+      "normal": {
+        "threshold": -0.43179571628570557,
+        "val_sensitivity": 0.7416666666666667,
+        "val_specificity": 0.9011194029850746,
+        "val_n_pos": 120
+      },
+      "dr": {
+        "threshold": 0.12517531216144562,
+        "val_sensitivity": 0.7424433249370277,
+        "val_specificity": 0.9004400440044005,
+        "val_n_pos": 1588
+      },
+      "glaucoma": {
+        "threshold": -0.24567414820194244,
+        "val_sensitivity": 0.5202312138728323,
+        "val_specificity": 0.9010791366906474,
+        "val_n_pos": 173
+      },
+      "csc": {
+        "threshold": -2.472228527069092,
+        "val_sensitivity": 0.75,
+        "val_specificity": 0.9006211180124224,
+        "val_n_pos": 12
+      },
+      "disc_edema": {
+        "threshold": -2.489629030227661,
+        "val_sensitivity": 0.8125,
+        "val_specificity": 0.9015625,
+        "val_n_pos": 16
+      },
+      "macular_scar": {
+        "threshold": -1.6754531860351562,
+        "val_sensitivity": 0.5686274509803921,
+        "val_specificity": 0.9008264462809917,
+        "val_n_pos": 51
+      },
+      "myopia": {
+        "threshold": -2.159036159515381,
+        "val_sensitivity": 0.9583333333333334,
+        "val_specificity": 0.9013157894736842,
+        "val_n_pos": 48
+      },
+      "retinal_det": {
+        "threshold": -2.889805316925049,
+        "val_sensitivity": 0.9444444444444444,
+        "val_specificity": 0.9012539184952978,
+        "val_n_pos": 18
+      },
+      "retinitis_pig": {
+        "threshold": -3.0413265228271484,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9009433962264151,
+        "val_n_pos": 20
+      }
+    },
+    "stage2_seed42": {
+      "normal": {
+        "threshold": -3.546875,
+        "val_sensitivity": 0.925,
+        "val_specificity": 0.9048507462686567,
+        "val_n_pos": 120
+      },
+      "dr": {
+        "threshold": -0.7421875,
+        "val_sensitivity": 0.9011335012594458,
+        "val_specificity": 0.9004400440044005,
+        "val_n_pos": 1588
+      },
+      "glaucoma": {
+        "threshold": -3.265625,
+        "val_sensitivity": 0.884393063583815,
+        "val_specificity": 0.9010791366906474,
+        "val_n_pos": 173
+      },
+      "csc": {
+        "threshold": -3.578125,
+        "val_sensitivity": 0.8333333333333334,
+        "val_specificity": 0.9006211180124224,
+        "val_n_pos": 12
+      },
+      "disc_edema": {
+        "threshold": -3.59375,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9390625,
+        "val_n_pos": 16
+      },
+      "macular_scar": {
+        "threshold": -3.578125,
+        "val_sensitivity": 0.9019607843137255,
+        "val_specificity": 0.9090909090909091,
+        "val_n_pos": 51
+      },
+      "myopia": {
+        "threshold": -3.5,
+        "val_sensitivity": 0.9166666666666666,
+        "val_specificity": 0.90625,
+        "val_n_pos": 48
+      },
+      "retinal_det": {
+        "threshold": -3.359375,
+        "val_sensitivity": 0.9444444444444444,
+        "val_specificity": 0.9310344827586207,
+        "val_n_pos": 18
+      },
+      "retinitis_pig": {
+        "threshold": -3.5625,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.949685534591195,
+        "val_n_pos": 20
+      }
+    },
+    "stage2_seed43": {
+      "normal": {
+        "threshold": -2.328125,
+        "val_sensitivity": 0.9416666666666667,
+        "val_specificity": 0.9011194029850746,
+        "val_n_pos": 120
+      },
+      "dr": {
+        "threshold": -0.068359375,
+        "val_sensitivity": 0.8375314861460957,
+        "val_specificity": 0.9004400440044005,
+        "val_n_pos": 1588
+      },
+      "glaucoma": {
+        "threshold": -0.298828125,
+        "val_sensitivity": 0.8786127167630058,
+        "val_specificity": 0.9010791366906474,
+        "val_n_pos": 173
+      },
+      "csc": {
+        "threshold": -3.3125,
+        "val_sensitivity": 0.8333333333333334,
+        "val_specificity": 0.90527950310559,
+        "val_n_pos": 12
+      },
+      "disc_edema": {
+        "threshold": -3.109375,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9015625,
+        "val_n_pos": 16
+      },
+      "macular_scar": {
+        "threshold": -3.296875,
+        "val_sensitivity": 0.8823529411764706,
+        "val_specificity": 0.9008264462809917,
+        "val_n_pos": 51
+      },
+      "myopia": {
+        "threshold": -3.359375,
+        "val_sensitivity": 0.9375,
+        "val_specificity": 0.9013157894736842,
+        "val_n_pos": 48
+      },
+      "retinal_det": {
+        "threshold": -3.6875,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9028213166144201,
+        "val_n_pos": 18
+      },
+      "retinitis_pig": {
+        "threshold": -3.59375,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.910377358490566,
+        "val_n_pos": 20
+      }
+    },
+    "stage2_seed44": {
+      "normal": {
+        "threshold": -0.9921875,
+        "val_sensitivity": 0.9166666666666666,
+        "val_specificity": 0.9011194029850746,
+        "val_n_pos": 120
+      },
+      "dr": {
+        "threshold": -1.0546875,
+        "val_sensitivity": 0.8387909319899244,
+        "val_specificity": 0.9004400440044005,
+        "val_n_pos": 1588
+      },
+      "glaucoma": {
+        "threshold": -1.546875,
+        "val_sensitivity": 0.861271676300578,
+        "val_specificity": 0.9010791366906474,
+        "val_n_pos": 173
+      },
+      "csc": {
+        "threshold": -3.375,
+        "val_sensitivity": 0.8333333333333334,
+        "val_specificity": 0.9006211180124224,
+        "val_n_pos": 12
+      },
+      "disc_edema": {
+        "threshold": -3.671875,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9046875,
+        "val_n_pos": 16
+      },
+      "macular_scar": {
+        "threshold": -3.171875,
+        "val_sensitivity": 0.9607843137254902,
+        "val_specificity": 0.9024793388429752,
+        "val_n_pos": 51
+      },
+      "myopia": {
+        "threshold": -2.5625,
+        "val_sensitivity": 0.9583333333333334,
+        "val_specificity": 0.9013157894736842,
+        "val_n_pos": 48
+      },
+      "retinal_det": {
+        "threshold": -3.65625,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9012539184952978,
+        "val_n_pos": 18
+      },
+      "retinitis_pig": {
+        "threshold": -3.34375,
+        "val_sensitivity": 1.0,
+        "val_specificity": 0.9119496855345912,
+        "val_n_pos": 20
+      }
+    }
+  },
+  "threshold_space": "raw logit (pre-temperature). Temperature scaling is used only for probability calibration, not for thresholding."
+}

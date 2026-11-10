@@ -1,0 +1,17 @@
+{
+  "manifest_rows": 23294,
+  "prep_rows": 23299,
+  "feature_index_rows": 23299,
+  "manifest_unique_keys": 23294,
+  "absolute_path_rows": {
+    "manifest": 0,
+    "prep": 0,
+    "index": 0
+  },
+  "sha256": {
+    "manifest_v1.public.csv": "434b191da03328f6a571eee9436df74a9faa09c57cd180fd829ad2f58e388003",
+    "manifest_v1_preprocessed.public.csv": "0d66198ea202ca8d901601e09ae77414fe4e1c5ff261488d2503a4e227ffcf16",
+    "retfound_cfp_224.public_index.csv": "123c871b73feb0cd4cf624c199775633596e3b985c73fd99a218c8503460e672",
+    "manifest_v1.public.json": "21e844c308f6992f3687cebb61329d693bb30351ae6ce9f8f549c3d4e867df40"
+  }
+}

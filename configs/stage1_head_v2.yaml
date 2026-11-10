@@ -1,0 +1,15 @@
+# Stage 1 head v2 - revised after the 30-epoch protocol missed the DR>=0.90 gate.
+# Selected on val only (seed 42 sweep); test and external holdout untouched.
+alpha: 0.25
+batch_size: 256
+drop_train_rejects: true
+dropout: 0.3
+epochs: 50
+hidden: 1024
+label_smoothing: 0.05
+lr: 0.001
+macro_min_pos: 30
+scheduler: cosine
+seed: 42
+sqrt_balanced_sampler: true
+weight_decay: 0.01

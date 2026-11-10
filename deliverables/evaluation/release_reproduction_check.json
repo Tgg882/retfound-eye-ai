@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-10",
+  "scope": "release-path validation only; test and IDRID holdout were not rerun",
+  "manifest": {
+    "path": "deliverables\\dataset\\manifest_v1.public.csv",
+    "sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+    "file_sha256": "434b191da03328f6a571eee9436df74a9faa09c57cd180fd829ad2f58e388003",
+    "provenance_mode": "public_sidecar",
+    "n_rows_total": 23294,
+    "n_val": 3479,
+    "n_target": 3479,
+    "target_datasets": {
+      "DDR": 1878,
+      "Fundus10": 656,
+      "APTOS2019": 548,
+      "MESSIDOR-2": 262,
+      "PAPILA": 73,
+      "IDRID": 62
+    }
+  },
+  "public_manifest_sidecar": {
+    "source_manifest_sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+    "public_manifest_sha256": "434b191da03328f6a571eee9436df74a9faa09c57cd180fd829ad2f58e388003",
+    "provenance_mode": "public_sidecar"
+  },
+  "public_metadata_all_six_checkpoints": {
+    "stage1_seed42": {
+      "expected": 0.90374656330238,
+      "recomputed": 0.90374656330238,
+      "abs_diff": 0.0,
+      "match": true
+    },
+    "stage1_seed43": {
+      "expected": 0.9023350414097268,
+      "recomputed": 0.9023350414097268,
+      "abs_diff": 0.0,
+      "match": true
+    },
+    "stage1_seed44": {
+      "expected": 0.9036049929036659,
+      "recomputed": 0.9036049929036659,
+      "abs_diff": 0.0,
+      "match": true
+    },
+    "stage2_seed42": {
+      "expected": 0.960693310295716,
+      "recomputed": 0.960693310295716,
+      "abs_diff": 0.0,
+      "match": true
+    },
+    "stage2_seed43": {
+      "expected": 0.9572153259826568,
+      "recomputed": 0.9572153259826568,
+      "abs_diff": 0.0,
+      "match": true
+    },
+    "stage2_seed44": {
+      "expected": 0.959503284229722,
+      "recomputed": 0.959503284229722,
+      "abs_diff": 0.0,
+      "match": true
+    }
+  },
+  "flat_release_checkpoint_seed42": {
+    "stage1_seed42": {
+      "expected": 0.90374656330238,
+      "recomputed": 0.90374656330238,
+      "abs_diff": 0.0,
+      "match": true
+    },
+    "stage2_seed42": {
+      "expected": 0.960693310295716,
+      "recomputed": 0.960693310295716,
+      "abs_diff": 0.0,
+      "match": true
+    }
+  },
+  "pytest": {
+    "result": "27 passed, 1 skipped"
+  },
+  "inference_smoke": {
+    "stage1": "pass",
+    "stage2": "pass",
+    "sample": "APTOS2019 test/class_0/005b95c28852.png"
+  }
+}

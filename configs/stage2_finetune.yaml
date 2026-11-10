@@ -1,0 +1,33 @@
+# Stage 2 - unfreeze ViT-L, initialised from the Stage 1 v2 head.
+# Hyperparameters follow plan 9.2 (batch 16 / 50 ep / warmup 10 / lr 5e-4 / min_lr 1e-6 /
+# layer_decay 0.65 / drop_path 0.2 / wd 0.05 / grad_clip 1.0). Effective batch 16 is
+# realised as micro-batch 8 x grad_accum 2 (the safe first pass was 4 x 4; both measured
+# at ~5.2-5.3 GB peak on the 8 GB laptop, 8 x 2 is ~25% faster).
+stage1_checkpoint: outputs/runs/stage1_v2/seed_42/best.pt
+seed: 42
+epochs: 50
+warmup_epochs: 10
+batch_size: 8
+grad_accum: 2
+eval_batch_size: 16
+num_workers: 4
+img_size: 224
+hidden: 1024
+dropout: 0.3
+drop_path: 0.2
+lr: 5.0e-4
+min_lr: 1.0e-6
+layer_decay: 0.65
+weight_decay: 0.05
+grad_clip: 1.0
+label_smoothing: 0.05
+alpha: 0.25
+macro_min_pos: 30
+sqrt_balanced_sampler: true
+drop_train_rejects: true
+hflip: 0.5
+amp: bf16
+grad_checkpointing: true
+# keep the input pipeline identical to the R2-3 feature cache
+center_crop: true
+l2_normalize_features: true

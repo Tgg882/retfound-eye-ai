@@ -1,0 +1,72 @@
+{
+  "version": "cfp9-v1",
+  "n_labels": 9,
+  "order_is_mandatory": true,
+  "labels": [
+    "normal",
+    "dr",
+    "glaucoma",
+    "csc",
+    "disc_edema",
+    "macular_scar",
+    "myopia",
+    "retinal_det",
+    "retinitis_pig"
+  ],
+  "index": {
+    "normal": 0,
+    "dr": 1,
+    "glaucoma": 2,
+    "csc": 3,
+    "disc_edema": 4,
+    "macular_scar": 5,
+    "myopia": 6,
+    "retinal_det": 7,
+    "retinitis_pig": 8
+  },
+  "exploratory": [
+    "csc"
+  ],
+  "exploratory_reason": "only 80 positives in the full manifest (val n_pos = 12); below the 100-positive gate; excluded from core macro",
+  "core_for_macro": [
+    "normal",
+    "dr",
+    "glaucoma",
+    "macular_scar",
+    "myopia"
+  ],
+  "macro_rule": "labels with n_pos >= 30 on the reported split",
+  "source_mapping": {
+    "dr": {
+      "MESSIDOR-2": "class_0->0, class_1..4->1",
+      "APTOS2019": "class_0->0, class_1..4->1",
+      "IDRID": "class_0->0, class_1..4->1",
+      "DDR": "txt grade 0->0, 1..4->1, grade 5 excluded"
+    },
+    "glaucoma": {
+      "PAPILA": "class_1->1, class_0->0"
+    },
+    "normal": {
+      "Fundus10": "Healthy->1"
+    },
+    "csc": {
+      "Fundus10": "CSC->1"
+    },
+    "disc_edema": {
+      "Fundus10": "Disc Edema->1"
+    },
+    "macular_scar": {
+      "Fundus10": "Macular Scar->1"
+    },
+    "myopia": {
+      "Fundus10": "Myopia->1"
+    },
+    "retinal_det": {
+      "Fundus10": "Retinal Detachment->1"
+    },
+    "retinitis_pig": {
+      "Fundus10": "Retinitis Pigmentosa->1"
+    }
+  },
+  "mask_semantics": "m=1 annotated, m=0 not annotated (forces y=0 and is excluded from loss/metrics)"
+}

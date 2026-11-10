@@ -1,0 +1,92 @@
+{
+  "mode": "smoke",
+  "steps": 2,
+  "seconds": 0.4,
+  "manifest": "outputs\\manifest\\manifest_v1.csv",
+  "manifest_sha256": "87cd436aad0118119b884b14f7f17b041c699699f7bc0cf84f4fd66960249c8e",
+  "seed": 42,
+  "loss_log": [
+    {
+      "step": 1,
+      "loss": 0.7018692493438721,
+      "finite": true
+    },
+    {
+      "step": 2,
+      "loss": 0.6860049366950989,
+      "finite": true
+    }
+  ],
+  "all_losses_finite": true,
+  "n_train": 16063,
+  "n_val": 3479,
+  "train_mask_known_fraction": 0.28066572546958923,
+  "sample_weight_unique": 1,
+  "device": "cuda",
+  "peak_vram_gb": 0.03552818298339844,
+  "macro_min_pos": 30,
+  "val_macro_auroc": 0.5471481045497277,
+  "val_macro_labels": [
+    "normal",
+    "dr",
+    "glaucoma",
+    "macular_scar",
+    "myopia"
+  ],
+  "val_per_label": {
+    "normal": {
+      "n_pos": 120,
+      "n_neg": 536,
+      "auroc": 0.6096859452736318,
+      "used_for_macro": true
+    },
+    "dr": {
+      "n_pos": 1588,
+      "n_neg": 1818,
+      "auroc": 0.5470433850689855,
+      "used_for_macro": true
+    },
+    "glaucoma": {
+      "n_pos": 173,
+      "n_neg": 556,
+      "auroc": 0.409635297542313,
+      "used_for_macro": true
+    },
+    "csc": {
+      "n_pos": 12,
+      "n_neg": 644,
+      "auroc": 0.4865424430641822,
+      "used_for_macro": false
+    },
+    "disc_edema": {
+      "n_pos": 16,
+      "n_neg": 640,
+      "auroc": 0.34150390625,
+      "used_for_macro": false
+    },
+    "macular_scar": {
+      "n_pos": 51,
+      "n_neg": 605,
+      "auroc": 0.6115702479338843,
+      "used_for_macro": true
+    },
+    "myopia": {
+      "n_pos": 48,
+      "n_neg": 608,
+      "auroc": 0.5578056469298246,
+      "used_for_macro": true
+    },
+    "retinal_det": {
+      "n_pos": 18,
+      "n_neg": 638,
+      "auroc": 0.6069313827934517,
+      "used_for_macro": false
+    },
+    "retinitis_pig": {
+      "n_pos": 20,
+      "n_neg": 636,
+      "auroc": 0.47617924528301886,
+      "used_for_macro": false
+    }
+  }
+}

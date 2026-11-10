@@ -1,0 +1,7 @@
+dataset,normal,dr,glaucoma,csc,disc_edema,macular_scar,myopia,retinal_det,retinitis_pig
+MESSIDOR-2,masked,known,masked,masked,masked,masked,masked,masked,masked
+APTOS2019,masked,known,masked,masked,masked,masked,masked,masked,masked
+IDRID,masked,known,masked,masked,masked,masked,masked,masked,masked
+DDR,masked,known,masked,masked,masked,masked,masked,masked,masked
+Fundus10,onehot,onehot,onehot,onehot,onehot,onehot,onehot,onehot,onehot
+PAPILA,masked,masked,known,masked,masked,masked,masked,masked,masked

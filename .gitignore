@@ -1,0 +1,27 @@
+.venv/
+/model/
+data/
+/dataset/*
+!/dataset/.gitkeep
+__pycache__/
+*.pyc
+.pytest_cache/
+RETFound-main/__pycache__/
+outputs/downloads/
+outputs/preprocessed/
+outputs/runs/
+
+deliverables/model/checkpoints/*.pt
+deliverables/model/checkpoints/*.pth
+
+
+outputs/reports/_*.py
+outputs/reports/_debug/
+
+# release workspace / authoring-only material
+/RETFound-main/
+/.workbuddy/
+/does/
+/paper.txt
+/retfound_fewshot/
+/outputs/reports/_*/

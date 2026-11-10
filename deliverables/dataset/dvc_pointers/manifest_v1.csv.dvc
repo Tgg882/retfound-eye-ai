@@ -1,0 +1,5 @@
+outs:
+- md5: 35fcc9684fc964ee9987f8ec9615dd98
+  size: 7621454
+  hash: md5
+  path: manifest_v1.csv

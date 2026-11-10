@@ -1,0 +1,10 @@
+label,n_positives,n_test_positives,min_positives_gate,gate_ok,status
+normal,823,125,100,True,core
+dr,10634,1582,100,True,core
+glaucoma,1146,170,100,True,core
+csc,80,12,100,False,exploratory
+disc_edema,110,17,100,True,core
+macular_scar,352,54,100,True,core
+myopia,321,48,100,True,core
+retinal_det,121,18,100,True,core
+retinitis_pig,128,19,100,True,core
